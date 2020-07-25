@@ -1,10 +1,11 @@
 VERSION 5.00
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form Form1 
    Caption         =   "Mercurio Magic Studio Spliter."
-   ClientHeight    =   5985
+   ClientHeight    =   11445
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   20250
+   ClientWidth     =   20925
    BeginProperty Font 
       Name            =   "Tahoma"
       Size            =   8.25
@@ -16,130 +17,225 @@ Begin VB.Form Form1
    EndProperty
    Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   399
+   ScaleHeight     =   763
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   1350
+   ScaleWidth      =   1395
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
+   Begin VB.CommandButton Command12 
+      Caption         =   "Recargar Filas y Columnas"
+      Height          =   495
+      Left            =   1680
+      TabIndex        =   44
+      Top             =   9840
+      Visible         =   0   'False
+      Width           =   2295
+   End
+   Begin VB.CommandButton Command11 
+      Height          =   375
+      Index           =   4
+      Left            =   5520
+      TabIndex        =   43
+      Top             =   7680
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command11 
+      Caption         =   "Oeste"
+      Height          =   375
+      Index           =   3
+      Left            =   4200
+      TabIndex        =   42
+      Top             =   7680
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command11 
+      Caption         =   "Este"
+      Height          =   375
+      Index           =   2
+      Left            =   2880
+      TabIndex        =   41
+      Top             =   7680
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command11 
+      Caption         =   "Sur"
+      Height          =   375
+      Index           =   1
+      Left            =   1560
+      TabIndex        =   40
+      Top             =   7680
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command11 
+      Caption         =   "Norte"
+      Height          =   375
+      Index           =   0
+      Left            =   240
+      TabIndex        =   39
+      Top             =   7680
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Misc"
+      Height          =   375
+      Index           =   5
+      Left            =   6840
+      TabIndex        =   38
+      Top             =   7080
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Muerte"
+      Height          =   375
+      Index           =   4
+      Left            =   5520
+      TabIndex        =   37
+      Top             =   7080
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Caminata"
+      Height          =   375
+      Index           =   3
+      Left            =   4200
+      TabIndex        =   36
+      Top             =   7080
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Reposo"
+      Height          =   375
+      Index           =   2
+      Left            =   2880
+      TabIndex        =   35
+      Top             =   7080
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Golpeado"
+      Height          =   375
+      Index           =   1
+      Left            =   1560
+      TabIndex        =   34
+      Top             =   7080
+      Width           =   1095
+   End
+   Begin VB.CommandButton Command8 
+      Caption         =   "Ataque"
+      Height          =   375
+      Index           =   0
+      Left            =   240
+      TabIndex        =   33
+      Top             =   7080
+      Width           =   1095
+   End
    Begin VB.TextBox Text11 
       Height          =   285
-      Left            =   1800
-      TabIndex        =   35
-      Top             =   1440
+      Left            =   1920
+      TabIndex        =   32
+      Top             =   1800
       Width           =   735
    End
    Begin VB.TextBox Text10 
       Height          =   375
       Left            =   5160
-      TabIndex        =   31
-      Top             =   6600
+      TabIndex        =   28
+      Top             =   8280
+      Visible         =   0   'False
       Width           =   2175
-   End
-   Begin VB.TextBox Text9 
-      Height          =   405
-      Left            =   9480
-      TabIndex        =   0
-      Top             =   0
-      Width           =   2055
-   End
-   Begin VB.TextBox Text8 
-      Height          =   405
-      Left            =   1080
-      TabIndex        =   29
-      Top             =   0
-      Width           =   6615
    End
    Begin VB.CommandButton Command10 
       Caption         =   "Deseleccionar Todos"
-      Height          =   480
-      Left            =   8760
-      TabIndex        =   28
-      Top             =   1080
+      Height          =   360
+      Left            =   7800
+      TabIndex        =   27
+      Top             =   1320
       Width           =   1650
    End
    Begin VB.CommandButton Command9 
       Caption         =   "Ver cuadricula"
-      Height          =   480
-      Left            =   8760
-      TabIndex        =   27
-      Top             =   480
+      Height          =   360
+      Left            =   7800
+      TabIndex        =   26
+      Top             =   840
       Width           =   1650
    End
    Begin VB.CommandButton Command7 
       Caption         =   "<"
       Height          =   720
-      Left            =   18000
-      TabIndex        =   26
-      Top             =   1920
+      Left            =   18120
+      TabIndex        =   25
+      Top             =   2280
       Width           =   690
    End
    Begin VB.CommandButton Command6 
       Caption         =   ">"
       Height          =   720
-      Left            =   18960
-      TabIndex        =   25
-      Top             =   1920
+      Left            =   19080
+      TabIndex        =   24
+      Top             =   2280
       Width           =   690
    End
    Begin VB.PictureBox Picture2 
       AutoRedraw      =   -1  'True
       Height          =   3615
-      Left            =   120
+      Left            =   240
       ScaleHeight     =   237
       ScaleMode       =   3  'Pixel
       ScaleWidth      =   1325
-      TabIndex        =   24
+      TabIndex        =   23
       TabStop         =   0   'False
-      Top             =   2760
+      Top             =   3120
       Width           =   19935
    End
    Begin VB.CommandButton Command5 
       Caption         =   "Generar"
       Height          =   600
-      Left            =   9720
-      TabIndex        =   23
-      Top             =   7200
+      Left            =   7080
+      TabIndex        =   22
+      Top             =   9720
+      Visible         =   0   'False
       Width           =   1770
    End
    Begin VB.TextBox Text7 
       Height          =   375
       Left            =   8040
-      TabIndex        =   21
-      Top             =   7200
+      TabIndex        =   20
+      Top             =   8880
       Visible         =   0   'False
       Width           =   855
    End
    Begin VB.TextBox Text6 
       Height          =   375
       Left            =   5400
-      TabIndex        =   19
-      Top             =   7560
+      TabIndex        =   18
+      Top             =   9240
       Visible         =   0   'False
       Width           =   855
    End
    Begin VB.TextBox Text5 
       Height          =   375
       Left            =   5400
-      TabIndex        =   18
-      Top             =   7200
+      TabIndex        =   17
+      Top             =   8880
       Visible         =   0   'False
       Width           =   855
    End
    Begin VB.TextBox Text4 
       Height          =   375
       Left            =   3120
-      TabIndex        =   14
-      Text            =   "512"
-      Top             =   7560
+      TabIndex        =   13
+      Text            =   "256"
+      Top             =   9240
       Visible         =   0   'False
       Width           =   855
    End
    Begin VB.TextBox Text3 
       Height          =   375
       Left            =   3120
-      TabIndex        =   13
-      Text            =   "512"
-      Top             =   7200
+      TabIndex        =   12
+      Text            =   "256"
+      Top             =   8880
       Visible         =   0   'False
       Width           =   855
    End
@@ -147,38 +243,38 @@ Begin VB.Form Form1
       Caption         =   "Nuevo Grafico"
       Height          =   360
       Left            =   240
-      TabIndex        =   12
-      Top             =   6600
+      TabIndex        =   11
+      Top             =   8280
       Width           =   2130
    End
    Begin VB.CommandButton Command3 
       Caption         =   "Split Frame"
       Height          =   360
-      Left            =   6240
-      TabIndex        =   11
-      Top             =   1080
+      Left            =   5520
+      TabIndex        =   10
+      Top             =   1320
       Width           =   1890
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Calcular"
       Height          =   360
-      Left            =   6240
-      TabIndex        =   9
-      Top             =   480
+      Left            =   5520
+      TabIndex        =   8
+      Top             =   840
       Width           =   1890
    End
    Begin VB.TextBox Text2 
       Height          =   375
-      Left            =   4800
-      TabIndex        =   4
-      Top             =   960
+      Left            =   4200
+      TabIndex        =   3
+      Top             =   1320
       Width           =   975
    End
    Begin VB.TextBox Text1 
       Height          =   375
-      Left            =   4800
-      TabIndex        =   3
-      Top             =   480
+      Left            =   4200
+      TabIndex        =   2
+      Top             =   840
       Width           =   975
    End
    Begin VB.PictureBox Picture1 
@@ -188,31 +284,47 @@ Begin VB.Form Form1
       ForeColor       =   &H0000FFFF&
       Height          =   480
       Index           =   0
-      Left            =   240
+      Left            =   360
       ScaleHeight     =   450
       ScaleWidth      =   450
-      TabIndex        =   2
+      TabIndex        =   1
       TabStop         =   0   'False
-      Top             =   1800
+      Top             =   2160
       Visible         =   0   'False
       Width           =   480
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Iniciar"
+      Cancel          =   -1  'True
+      Caption         =   "Cargar Gráfico"
       CausesValidation=   0   'False
-      Height          =   360
-      Left            =   0
-      TabIndex        =   1
-      Top             =   0
-      Width           =   990
+      Height          =   480
+      Left            =   120
+      TabIndex        =   0
+      Top             =   240
+      Width           =   1815
+   End
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   1680
+      Top             =   240
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   393216
+   End
+   Begin VB.Label Label11 
+      Height          =   1815
+      Left            =   4440
+      TabIndex        =   45
+      Top             =   9840
+      Visible         =   0   'False
+      Width           =   2295
    End
    Begin VB.Label Label14 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
       Height          =   195
-      Left            =   2040
-      TabIndex        =   34
-      Top             =   2400
+      Left            =   2160
+      TabIndex        =   31
+      Top             =   2760
       Width           =   45
    End
    Begin VB.Label Label13 
@@ -220,9 +332,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Frames seleccionados:"
       Height          =   195
-      Left            =   240
-      TabIndex        =   33
-      Top             =   2400
+      Left            =   360
+      TabIndex        =   30
+      Top             =   2760
       Width           =   1620
    End
    Begin VB.Label Label12 
@@ -231,19 +343,10 @@ Begin VB.Form Form1
       Caption         =   "Nombre:"
       Height          =   195
       Left            =   4200
-      TabIndex        =   32
-      Top             =   6720
+      TabIndex        =   29
+      Top             =   8400
+      Visible         =   0   'False
       Width           =   615
-   End
-   Begin VB.Label Label11 
-      AutoSize        =   -1  'True
-      BackStyle       =   0  'Transparent
-      Caption         =   "nombre:"
-      Height          =   195
-      Left            =   7920
-      TabIndex        =   30
-      Top             =   120
-      Width           =   600
    End
    Begin VB.Label Label10 
       AutoSize        =   -1  'True
@@ -251,8 +354,8 @@ Begin VB.Form Form1
       Caption         =   "Numero de Frames:"
       Height          =   195
       Left            =   6480
-      TabIndex        =   22
-      Top             =   7320
+      TabIndex        =   21
+      Top             =   9000
       Visible         =   0   'False
       Width           =   1425
    End
@@ -262,8 +365,8 @@ Begin VB.Form Form1
       Caption         =   "Filas:"
       Height          =   195
       Left            =   4440
-      TabIndex        =   20
-      Top             =   7680
+      TabIndex        =   19
+      Top             =   9360
       Visible         =   0   'False
       Width           =   1185
    End
@@ -273,8 +376,8 @@ Begin VB.Form Form1
       Caption         =   "Columnas:"
       Height          =   195
       Left            =   4440
-      TabIndex        =   17
-      Top             =   7320
+      TabIndex        =   16
+      Top             =   9000
       Visible         =   0   'False
       Width           =   1185
    End
@@ -284,8 +387,8 @@ Begin VB.Form Form1
       Caption         =   "Alto de lienzo:"
       Height          =   195
       Left            =   1680
-      TabIndex        =   16
-      Top             =   7680
+      TabIndex        =   15
+      Top             =   9360
       Visible         =   0   'False
       Width           =   1020
    End
@@ -295,8 +398,8 @@ Begin VB.Form Form1
       Caption         =   "Ancho de lienzo:"
       Height          =   195
       Left            =   1680
-      TabIndex        =   15
-      Top             =   7320
+      TabIndex        =   14
+      Top             =   9000
       Visible         =   0   'False
       Width           =   1185
    End
@@ -304,8 +407,8 @@ Begin VB.Form Form1
       BorderColor     =   &H00FF0000&
       BorderWidth     =   2
       Height          =   525
-      Left            =   225
-      Top             =   1785
+      Left            =   345
+      Top             =   2145
       Visible         =   0   'False
       Width           =   525
    End
@@ -314,9 +417,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Numero de frames:"
       Height          =   195
-      Left            =   120
-      TabIndex        =   10
-      Top             =   1440
+      Left            =   240
+      TabIndex        =   9
+      Top             =   1800
       Width           =   1380
    End
    Begin VB.Label Label4 
@@ -324,9 +427,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Grafico alto:"
       Height          =   195
-      Left            =   120
-      TabIndex        =   8
-      Top             =   1080
+      Left            =   240
+      TabIndex        =   7
+      Top             =   1440
       Width           =   885
    End
    Begin VB.Label Label3 
@@ -334,9 +437,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Grafico ancho:"
       Height          =   195
-      Left            =   120
-      TabIndex        =   7
-      Top             =   600
+      Left            =   240
+      TabIndex        =   6
+      Top             =   960
       Width           =   1050
    End
    Begin VB.Label Label2 
@@ -344,9 +447,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Frame alto:"
       Height          =   195
-      Left            =   2880
-      TabIndex        =   6
-      Top             =   1080
+      Left            =   3000
+      TabIndex        =   5
+      Top             =   1440
       Width           =   975
    End
    Begin VB.Label Label1 
@@ -354,9 +457,9 @@ Begin VB.Form Form1
       BackStyle       =   0  'Transparent
       Caption         =   "Frame ancho:"
       Height          =   195
-      Left            =   2880
-      TabIndex        =   5
-      Top             =   600
+      Left            =   3000
+      TabIndex        =   4
+      Top             =   960
       Width           =   990
    End
 End
@@ -366,19 +469,19 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-If Text9.Text = vbNullString Then
-MsgBox "Debes introducir un nombre de archivo."
-Exit Sub
 
+CommonDialog1.InitDir = App.PATH & "\Graficos_raw\"
+CommonDialog1.Filter = "Apps (*.bmp)|*.bmp|All files (*.*)|*.*"
+CommonDialog1.DefaultExt = "txt"
+CommonDialog1.DialogTitle = "Select File"
+CommonDialog1.ShowOpen
+
+Picture2.Cls
+If Len(CommonDialog1.FileName) > 0 Then
+Abrir CommonDialog1.FileName
 End If
-Form1.Picture2.Cls
-Text1.Text = vbNullString
-Text2.Text = vbNullString
-Text11.Text = vbNullString
-Abrir Text8.Text & Text9.Text & ".bmp"
+
 End Sub
-
-
 
 Private Sub Command10_Click()
 Dim i As Long
@@ -395,17 +498,29 @@ Label14.Caption = FramesSeleccionados
 
 End Sub
 
+Private Sub Command11_Click(Index As Integer)
+    DireccionAnim = Command11(Index).Caption
+    newGrafico
+End Sub
+
+Private Sub Command12_Click()
+ newGrafico
+End Sub
+
 Private Sub Command2_Click()
-If Val(Text1.Text) > 0 And Val(Text2.Text) > 0 Then
+
+If Val(Text11.Text) > 0 Then
+    NumFrames = Val(Text11.Text)
+    Frameswidth = Info.biWidth / NumFrames
+    FramesHeight = Info.biHeight
+    Text1.Text = Frameswidth
+    Text2.Text = FramesHeight
+ElseIf Val(Text1.Text) > 0 And Val(Text2.Text) > 0 Then
     Frameswidth = Text1.Text
     FramesHeight = Text2.Text
     NumFrames = Info.biWidth / Frameswidth
     Text11.Text = NumFrames
-ElseIf Val(Text11.Text) > 0 Then
-    NumFrames = Val(Text11.Text)
-    Frameswidth = Info.biWidth / NumFrames
-    FramesHeight = Info.biHeight
-Else
+
 Exit Sub
 End If
 
@@ -421,20 +536,42 @@ If selectedframe > 0 And selectedframe <= NumFrames Then
 End If
 End Sub
 
+Private Sub newGrafico()
+If Frameswidth = 0 Or FramesHeight = 0 Then
+    Command2_Click
+    Exit Sub
+End If
+
+Text10.Text = TipoAnim & DireccionAnim & "-" & NumFrames & "-" & Frameswidth & "-" & FramesHeight
+Text5.Text = Val(Text3.Text / Frameswidth)
+Text6.Text = Val(Text4.Text / FramesHeight)
+Text7.Text = Val(Text5.Text * Text6.Text)
+
+Label11.Caption = "Frames por medidas: " & vbCrLf & "128: " & Val(Val(128 / Frameswidth) * Val(128 / FramesHeight)) & vbCrLf & "256: " & Val(Val(256 / Frameswidth) * Val(256 / FramesHeight)) & vbCrLf & "512: " & Val(Val(512 / Frameswidth) * Val(512 / FramesHeight))
+
+End Sub
+
 Private Sub Command4_Click()
+
+newGrafico
+
+Command5.Visible = True
+Command12.Visible = True
 
 Label6.Visible = True
 Label7.Visible = True
 Label8.Visible = True
 Label9.Visible = True
 Label10.Visible = True
+Label11.Visible = True
+Label12.Visible = True
 
 Text3.Visible = True
 Text4.Visible = True
 Text5.Visible = True
 Text6.Visible = True
 Text7.Visible = True
-
+Text10.Visible = True
 End Sub
 
 Private Sub Command5_Click()
@@ -499,6 +636,11 @@ End Sub
 
 
 
+Private Sub Command8_Click(Index As Integer)
+    TipoAnim = Command8(Index).Caption
+    newGrafico
+End Sub
+
 Private Sub Command9_Click()
 
 bVerCuadricula = Not bVerCuadricula
@@ -515,10 +657,6 @@ Private Sub Form_Click()
     
 End Sub
 
-Private Sub Form_Load()
-    Text8.Text = App.PATH & "\Graficos_Raw\"
-    Text8.SelStart = Len(Text8.Text)
-End Sub
 
 Private Sub Picture1_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
 If Button = vbRightButton Then
@@ -558,3 +696,6 @@ End If
 
 End Sub
 
+Private Sub Text11_Change()
+ Command2_Click
+End Sub

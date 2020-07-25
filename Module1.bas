@@ -54,6 +54,8 @@ Public Info As BITMAPINFOHEADER
 Public Frameswidth As Long
 Public FramesHeight As Long
 Public NumFrames As Integer
+Public TipoAnim As String
+Public DireccionAnim As String
 Public FrameSelectos() As Boolean
 Public FF As Integer
 Public selectedframe As Integer
@@ -68,16 +70,22 @@ Public FRAME() As Integer
 Public bVerCuadricula As Boolean
 
 
-
-
 Public Sub Calcular()
 Dim i As Long
-
+Dim OldFrames As Integer
 
 
 If NumFrames >= 1 Then
 ReDim FrameSelectos(1 To NumFrames)
 With Form1
+ 
+OldFrames = .Picture1.count - 1
+If OldFrames > 0 Then
+    For i = 1 To OldFrames
+    Unload .Picture1(i)
+    Next i
+End If
+
 Load .Picture1(1)
 .Picture1(1).Left = .Picture1(0).Left
 .Picture1(1).Top = .Picture1(0).Top

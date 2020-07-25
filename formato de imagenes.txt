@@ -1,0 +1,3 @@
+pasarlas por ps -> 16bits/canal
+guardar como png
+convertir a bmp desde paint
