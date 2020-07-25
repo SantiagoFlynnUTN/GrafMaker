@@ -1,0 +1,19 @@
+[History]
+1=#P0#=mb	#P1#=Command1_Click	#P2#=Project1/Form1/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20150314171327	#P7#=0	#P8#=7	.
+2=#P0#=mb	#P1#=Command2_Click	#P2#=Project1/Form1/Command2_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150314170908	#P7#=0	#P8#=10	.
+3=#P0#=mb	#P1#=Calcular	#P2#=Project1/Module1/Calcular	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150314170823	#P7#=0	#P8#=2	.
+4=#P0#=mb	#P1#=CrearGrafico	#P2#=Project1/Module1/CrearGrafico	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312090758	#P7#=0	#P8#=33	.
+5=#P0#=mb	#P1#=Picture1_MouseUp	#P2#=Project1/Form1/Picture1_MouseUp	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312090357	#P7#=0	#P8#=8	.
+6=#P0#=mb	#P1#=Command10_Click	#P2#=Project1/Form1/Command10_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312090326	#P7#=0	#P8#=11	.
+7=#P0#=mb	#P1#=Abrir	#P2#=Project1/Module1/Abrir	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312090040	#P7#=0	#P8#=2	.
+8=#P0#=mb	#P1#=Form_Load	#P2#=Project1/Form1/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20150312085818	#P7#=0	#P8#=3	.
+9=#P0#=mb	#P1#=Command7_Click	#P2#=Project1/Form1/Command7_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312085603	#P7#=0	#P8#=7	.
+10=#P0#=mb	#P1#=DibujarCuadricula	#P2#=Project1/Module1/DibujarCuadricula	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312085316	#P7#=0	#P8#=12	.
+11=#P0#=mb	#P1#=Command6_MouseDown	#P2#=Project1/Form1/Command6_MouseDown	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312084636	#P7#=0	#P8#=-1	.
+12=#P0#=mb	#P1#=Command9_Click	#P2#=Project1/Form1/Command9_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20150312084609	#P7#=0	#P8#=5	.
+13=#P0#=mb	#P1#=Form_Click	#P2#=Project1/Form1/Form_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20150312084538	#P7#=0	#P8#=1	.
+14=#P0#=mb	#P1#=GetFrame	#P2#=Project1/Module1/GetFrame	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312082743	#P7#=0	#P8#=21	.
+15=#P0#=mb	#P1#=ObtenerFrame	#P2#=Project1/Module1/ObtenerFrame	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312023643	#P7#=0	#P8#=68	.
+16=#P0#=mb	#P1#=Command5_Click	#P2#=Project1/Form1/Command5_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312020423	#P7#=0	#P8#=34	.
+17=#P0#=mb	#P1#=Command4_Click	#P2#=Project1/Form1/Command4_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312014523	#P7#=0	#P8#=13	.
+18=#P0#=mb	#P1#=Command3_Click	#P2#=Project1/Form1/Command3_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20150312012335	#P7#=0	#P8#=1	.
