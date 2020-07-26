@@ -23,7 +23,7 @@ Begin VB.Form Form1
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Command12 
-      Caption         =   "Recargar Filas y Columnas"
+      Caption         =   "Recargar Datos"
       Height          =   495
       Left            =   1680
       TabIndex        =   44
@@ -542,10 +542,11 @@ If Frameswidth = 0 Or FramesHeight = 0 Then
     Exit Sub
 End If
 
-Text10.Text = TipoAnim & DireccionAnim & "-" & NumFrames & "-" & Frameswidth & "-" & FramesHeight
+
 Text5.Text = Val(Text3.Text / Frameswidth)
 Text6.Text = Val(Text4.Text / FramesHeight)
-Text7.Text = Val(Text5.Text * Text6.Text)
+Text10.Text = TipoAnim & DireccionAnim & "-" & FramesSeleccionados & "-" & Frameswidth & "-" & FramesHeight & "-" & Text5.Text & "-" & Text6.Text
+Text7.Text = FramesSeleccionados
 
 Label11.Caption = "Frames por medidas: " & vbCrLf & "128: " & Val(Val(128 / Frameswidth) * Val(128 / FramesHeight)) & vbCrLf & "256: " & Val(Val(256 / Frameswidth) * Val(256 / FramesHeight)) & vbCrLf & "512: " & Val(Val(512 / Frameswidth) * Val(512 / FramesHeight))
 
@@ -656,6 +657,7 @@ Private Sub Form_Click()
     Shape1.Visible = False
     
 End Sub
+
 
 
 Private Sub Picture1_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)

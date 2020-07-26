@@ -318,7 +318,7 @@ nhead.bfOffBits = 54
 
 Nuevo = FreeFile
 
-Open App.PATH & "\" & Form1.Text10.Text & ".bmp" For Binary Access Write As #Nuevo
+Open App.PATH & "\Graficos_final_bmp\" & Form1.Text10.Text & ".bmp" For Binary Access Write As #Nuevo
 
     Put Nuevo, , nhead
     Put Nuevo, , nInfo
