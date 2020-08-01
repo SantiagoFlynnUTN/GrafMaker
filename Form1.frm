@@ -36,43 +36,43 @@ Begin VB.Form Form1
       Index           =   4
       Left            =   5520
       TabIndex        =   43
-      Top             =   7680
+      Top             =   6960
       Width           =   1095
    End
    Begin VB.CommandButton Command11 
-      Caption         =   "Oeste"
+      Caption         =   "4.Oeste"
       Height          =   375
       Index           =   3
       Left            =   4200
       TabIndex        =   42
-      Top             =   7680
+      Top             =   6960
       Width           =   1095
    End
    Begin VB.CommandButton Command11 
-      Caption         =   "Este"
+      Caption         =   "2.Este"
       Height          =   375
       Index           =   2
-      Left            =   2880
+      Left            =   1560
       TabIndex        =   41
-      Top             =   7680
+      Top             =   6960
       Width           =   1095
    End
    Begin VB.CommandButton Command11 
-      Caption         =   "Sur"
+      Caption         =   "3.Sur"
       Height          =   375
       Index           =   1
-      Left            =   1560
+      Left            =   2880
       TabIndex        =   40
-      Top             =   7680
+      Top             =   6960
       Width           =   1095
    End
    Begin VB.CommandButton Command11 
-      Caption         =   "Norte"
+      Caption         =   "1.Norte"
       Height          =   375
       Index           =   0
       Left            =   240
       TabIndex        =   39
-      Top             =   7680
+      Top             =   6960
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -81,7 +81,7 @@ Begin VB.Form Form1
       Index           =   5
       Left            =   6840
       TabIndex        =   38
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -90,7 +90,7 @@ Begin VB.Form Form1
       Index           =   4
       Left            =   5520
       TabIndex        =   37
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -99,7 +99,7 @@ Begin VB.Form Form1
       Index           =   3
       Left            =   4200
       TabIndex        =   36
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -108,7 +108,7 @@ Begin VB.Form Form1
       Index           =   2
       Left            =   2880
       TabIndex        =   35
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -117,7 +117,7 @@ Begin VB.Form Form1
       Index           =   1
       Left            =   1560
       TabIndex        =   34
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.CommandButton Command8 
@@ -126,7 +126,7 @@ Begin VB.Form Form1
       Index           =   0
       Left            =   240
       TabIndex        =   33
-      Top             =   7080
+      Top             =   7560
       Width           =   1095
    End
    Begin VB.TextBox Text11 
@@ -310,6 +310,14 @@ Begin VB.Form Form1
       _ExtentY        =   847
       _Version        =   393216
    End
+   Begin VB.Label Label15 
+      Caption         =   "Label15"
+      Height          =   255
+      Left            =   2400
+      TabIndex        =   46
+      Top             =   360
+      Width           =   15735
+   End
    Begin VB.Label Label11 
       Height          =   1815
       Left            =   4440
@@ -479,6 +487,9 @@ CommonDialog1.ShowOpen
 Picture2.Cls
 If Len(CommonDialog1.FileName) > 0 Then
 Abrir CommonDialog1.FileName
+Command2_Click
+Label15.Caption = CommonDialog1.FileName
+
 End If
 
 End Sub
@@ -509,6 +520,10 @@ End Sub
 
 Private Sub Command2_Click()
 
+If Val(Text11) = 0 Then
+Exit Sub
+End If
+
 If Val(Text11.Text) > 0 Then
     NumFrames = Val(Text11.Text)
     Frameswidth = Info.biWidth / NumFrames
@@ -520,14 +535,13 @@ ElseIf Val(Text1.Text) > 0 And Val(Text2.Text) > 0 Then
     FramesHeight = Text2.Text
     NumFrames = Info.biWidth / Frameswidth
     Text11.Text = NumFrames
-
-Exit Sub
 End If
 
 Calcular
         FramesSeleccionados = NumFrames
         Form1.Label14.Caption = FramesSeleccionados
-        
+
+Command9_Click
 End Sub
 
 Private Sub Command3_Click()
@@ -542,10 +556,14 @@ If Frameswidth = 0 Or FramesHeight = 0 Then
     Exit Sub
 End If
 
+If DireccionAnim = "" Then
+MsgBox "Pone la dirección de la animación"
+Exit Sub
+End If
 
 Text5.Text = Val(Text3.Text / Frameswidth)
 Text6.Text = Val(Text4.Text / FramesHeight)
-Text10.Text = TipoAnim & DireccionAnim & "-" & FramesSeleccionados & "-" & Frameswidth & "-" & FramesHeight & "-" & Text5.Text & "-" & Text6.Text
+Text10.Text = DireccionAnim & TipoAnim & "-" & FramesSeleccionados & "-" & Text5.Text & "-" & Text6.Text & "-" & Frameswidth & "-" & FramesHeight & "-"
 Text7.Text = FramesSeleccionados
 
 Label11.Caption = "Frames por medidas: " & vbCrLf & "128: " & Val(Val(128 / Frameswidth) * Val(128 / FramesHeight)) & vbCrLf & "256: " & Val(Val(256 / Frameswidth) * Val(256 / FramesHeight)) & vbCrLf & "512: " & Val(Val(512 / Frameswidth) * Val(512 / FramesHeight))
@@ -612,7 +630,13 @@ If c > newnFrames Then
     MsgBox "El numero de frames selectos sobrepasa los frames del nuevo grafico."
     Exit Sub
 End If
+
+
+
+
 Module1.CrearGrafico
+
+DireccionAnim = ""
 
 End Sub
 
@@ -660,6 +684,8 @@ End Sub
 
 
 
+
+
 Private Sub Picture1_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
 If Button = vbRightButton Then
         If Index >= 1 Then
@@ -697,6 +723,7 @@ ElseIf Button = vbLeftButton Then
 End If
 
 End Sub
+
 
 Private Sub Text11_Change()
  Command2_Click
